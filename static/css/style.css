@@ -1,0 +1,113 @@
+:root {
+  /* Same as max viewport in Utopia */
+  --max-width: 1140px;
+
+  /* Thanks, Utopia!
+   * https://utopia.fyi/type/calculator
+   */
+  --size-1: clamp(0.69rem, calc(0.59rem + 0.52vw), 0.96rem);
+  --size-2: clamp(0.83rem, calc(0.69rem + 0.72vw), 1.20rem);
+  --size-3: clamp(1.00rem, calc(0.80rem + 0.98vw), 1.50rem);
+  --size-4: clamp(1.20rem, calc(0.94rem + 1.32vw), 1.88rem);
+  --size-5: clamp(1.44rem, calc(1.09rem + 1.76vw), 2.34rem);
+  --size-6: clamp(1.73rem, calc(1.26rem + 2.35vw), 2.93rem);
+  --size-7: clamp(2.07rem, calc(1.45rem + 3.10vw), 3.66rem);
+  --size-8: clamp(2.49rem, calc(1.67rem + 4.08vw), 4.58rem);
+
+  /* https://utopia.fyi/space/calculator */
+  --space-3xs: clamp(0.25rem, calc(0.20rem + 0.24vw), 0.38rem);
+  --space-2xs: clamp(0.50rem, calc(0.40rem + 0.49vw), 0.75rem);
+  --space-xs: clamp(0.75rem, calc(0.60rem + 0.73vw), 1.13rem);
+  --space-s: clamp(1.00rem, calc(0.80rem + 0.98vw), 1.50rem);
+  --space-m: clamp(1.50rem, calc(1.21rem + 1.46vw), 2.25rem);
+  --space-l: clamp(2.00rem, calc(1.61rem + 1.95vw), 3.00rem);
+  --space-xl: clamp(3.00rem, calc(2.41rem + 2.93vw), 4.50rem);
+  --space-2xl: clamp(4.00rem, calc(3.22rem + 3.90vw), 6.00rem);
+  --space-3xl: clamp(6.00rem, calc(4.83rem + 5.85vw), 9.00rem);
+
+  /* font families */
+  --header: 'Cinzel Decorative', cursive;
+  --body: 'PT Serif', serif;
+}
+
+/* CSS reset */
+* {
+  all: unset;
+  display: revert;
+}
+
+.layout {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-m) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  background-color: #F3ECDF;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+}
+
+.header__title {
+  text-align: center;
+  font-family: var(--header);
+  font-size: var(--size-8);
+  cursor: pointer;
+  color: #574B39;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header__navlink {
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: var(--size-4);
+  font-family: var(--body);
+  color: #A55044;
+}
+
+.header__navlink:hover {
+  color: #574B39;
+}
+
+.main {
+  background-color: #FFFCF3;
+  box-shadow: 
+    1px 1px 1px #0000005F,
+    2px 2px 10px #0000005F;
+}
+
+.main__content {
+  max-width: calc(45 * var(--size-2));
+  margin: var(--space-3xl) auto;
+}
+
+.section__header {
+  font-size: var(--size-4);
+  font-family: var(--header);
+  color: #A55044;
+  font-weight: bold;
+}
+
+.section__paragraph {
+  font-size: var(--size-2);
+  font-family: var(--body);
+  margin: var(--space-s) 0;
+  color: #232323;
+  line-height: 1.6;
+}
+
+.section__divider {
+  display: block;
+  width: 7rem;
+  height: auto;
+  margin: var(--space-l) auto;
+  color: #A55044;
+}
